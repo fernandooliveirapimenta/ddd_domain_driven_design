@@ -1,0 +1,48 @@
+# Mac
+._*
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Eclipse
+.buildpath
+.classpath
+*.launch
+.loadpath
+.metadata
+.project
+*.pydevproject
+.settings/
+.springBeans
+
+# Intellij
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+
+# Maven
+log/
+target/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Java
+*.class
+
+# Directories
+/build/
+/bin/
+/out/
+/deploy/
+
+# Logs
+*.log
+
+*.pid
+.factorypath
