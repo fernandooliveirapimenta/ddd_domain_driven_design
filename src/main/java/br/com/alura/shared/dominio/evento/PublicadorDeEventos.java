@@ -1,4 +1,4 @@
-package br.com.alura.escola.dominio;
+package br.com.alura.shared.dominio.evento;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ public class PublicadorDeEventos {
 
     private final List<Ouvinte> ouvintes = new ArrayList<>();
 
-    public void  adicionar(Ouvinte ouvinte) {
+    public void adicionarOuvinte(Ouvinte ouvinte) {
         this.ouvintes.add(ouvinte);
     }
 

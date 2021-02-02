@@ -1,6 +1,6 @@
 package br.com.alura.gameficacao.dominio.selo;
 
-import br.com.alura.escola.dominio.aluno.CPF;
+import br.com.alura.shared.dominio.CPF;
 
 import java.util.List;
 

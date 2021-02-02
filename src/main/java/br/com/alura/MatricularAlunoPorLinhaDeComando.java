@@ -1,11 +1,14 @@
-package br.com.alura.escola;
+package br.com.alura;
 
 import br.com.alura.escola.aplicacao.aluno.matricular.MatricularAluno;
 import br.com.alura.escola.aplicacao.aluno.matricular.MatricularAlunoDto;
-import br.com.alura.escola.dominio.Ouvinte;
-import br.com.alura.escola.dominio.PublicadorDeEventos;
-import br.com.alura.escola.dominio.aluno.LogDeAlunoMariculadoOuvinte;
+import br.com.alura.escola.aplicacao.aluno.matricular.LogDeAlunoMariculadoOuvinte;
 import br.com.alura.escola.infra.aluno.RepositorioDeAlunosEmMemoria;
+
+import br.com.alura.shared.dominio.evento.PublicadorDeEventos;
+
+import br.com.alura.gameficacao.aplicacao.selo.GeraSeloAlunoNovatoOuvinte;
+import br.com.alura.gameficacao.infra.selo.RepositorioDeSelosEmMemoria;
 
 public class MatricularAlunoPorLinhaDeComando {
 	
@@ -15,7 +18,8 @@ public class MatricularAlunoPorLinhaDeComando {
 		String email = "fulano@email.com";
 
 		PublicadorDeEventos publicadorDeEventos = new PublicadorDeEventos();
-		publicadorDeEventos.adicionar(new LogDeAlunoMariculadoOuvinte());
+		publicadorDeEventos.adicionarOuvinte(new LogDeAlunoMariculadoOuvinte());
+		publicadorDeEventos.adicionarOuvinte(new GeraSeloAlunoNovatoOuvinte(new RepositorioDeSelosEmMemoria()));
 		MatricularAluno matricular = new MatricularAluno(new RepositorioDeAlunosEmMemoria(), publicadorDeEventos);
 		matricular.executa(
 				new MatricularAlunoDto(nome, 
