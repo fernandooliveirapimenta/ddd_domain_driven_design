@@ -1,14 +1,14 @@
 package br.com.alura;
 
-import br.com.alura.escola.aplicacao.aluno.matricular.MatricularAluno;
-import br.com.alura.escola.aplicacao.aluno.matricular.MatricularAlunoDto;
-import br.com.alura.escola.aplicacao.aluno.matricular.LogDeAlunoMariculadoOuvinte;
-import br.com.alura.escola.infra.aluno.RepositorioDeAlunosEmMemoria;
+import br.com.alura.escola.academico.aplicacao.aluno.matricular.MatricularAluno;
+import br.com.alura.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDto;
+import br.com.alura.escola.academico.aplicacao.aluno.matricular.LogDeAlunoMariculadoOuvinte;
+import br.com.alura.escola.academico.infra.aluno.RepositorioDeAlunosEmMemoria;
 
-import br.com.alura.shared.dominio.evento.PublicadorDeEventos;
+import br.com.alura.escola.shared.dominio.evento.PublicadorDeEventos;
 
-import br.com.alura.gameficacao.aplicacao.selo.GeraSeloAlunoNovatoOuvinte;
-import br.com.alura.gameficacao.infra.selo.RepositorioDeSelosEmMemoria;
+import br.com.alura.escola.gameficacao.aplicacao.selo.GeraSeloAlunoNovatoOuvinte;
+import br.com.alura.escola.gameficacao.infra.selo.RepositorioDeSelosEmMemoria;
 
 public class MatricularAlunoPorLinhaDeComando {
 	
